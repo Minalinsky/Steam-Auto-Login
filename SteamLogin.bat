@@ -5,15 +5,10 @@ TITLE Select Steam account
 taskkill.exe /F /IM steam.exe
 
 cls
-echo(
-echo(
-echo(
-echo                                      Select your account
-echo                            =======================================
-echo(
-echo 1) FIRST_STEAM_USERNAME
-echo 2) SECOND_STEAM_USERNAME
-echo(
+echo                                      [ Select your account ]
+echo                                =======================================
+echo 1 - FIRST_STEAM_USERNAME
+echo 2 - SECOND_STEAM_USERNAME
 
 CHOICE /M Select /C 12
 
