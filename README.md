@@ -18,6 +18,20 @@ The `.bat` file executes the following steps:
 3. The script manually set in registry **"AutoLoginUser"** as the selected username and **"RememberPassword"** to **1**.
 4. The script opens steam again. Steam should read the username set in **"AutoLoginUser"** and automatically login using the *Remember Password* option
 
+## Adding More Accounts
+If you need to add a third account to be able to quick switch between them, open the `.bat` file in some text editor and add the following lines:
+```bat
+echo 3 - THIRD_STEAM_USERNAME
+
+CHOICE /M Select /C 123
+
+If Errorlevel 3 Goto 3
+
+:3
+set username=THIRD_STEAM_USERNAME
+Goto end
+```
+
 ### Note
 The 3rd step is actually what Steam does when an user login into his account with "Remember Password" option enabled. The script simply does it automatically for every login.
 
