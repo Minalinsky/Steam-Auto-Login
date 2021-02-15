@@ -6,7 +6,7 @@ This is a simple **Windows** script that let you switch between Steam accounts q
 In order to use the script, simply do the following: 
 - Download the `SteamLogin.bat` file from this repository
 - Open the file in a text editor
-- Replace `FIRST_STEAM_USERNAME` and `SECOND_STEAM_USERNAME` with your **Steam login**
+- Replace `FIRST_STEAM_USERNAME` and `SECOND_STEAM_USERNAME` with your **Steam login username**
 - Run the `.bat` file and select which account you want to login into
 
 > NOTE: When running for the **first time**, you will be asked for your Steam Guard code. However the code should not be needed for the following times.
