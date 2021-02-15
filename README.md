@@ -18,6 +18,13 @@ The `.bat` file executes the following steps:
 3. The script manually set in registry **"AutoLoginUser"** as the selected username and **"RememberPassword"** to **1**.
 4. The script opens steam again. Steam should read the username set in **"AutoLoginUser"** and automatically login using the *Remember Password* option
 
+### Note
+The 3rd step is actually what Steam does when an user login into his account with "Remember Password" option enabled. The script simply does it automatically for every login.
+
+By killing the Steam process without logging out and setting the username in "AutoLoginUser" variable before opening the Steam again, the script forces Steam to reuse the stored password for each account when it is open again.
+
+For Steam, it is the same as Logging In with *"Remember Password"* checkbox ticked, closing Steam, and reopening it, but the script sets the user in registry before reopening Steam.
+
 ## Adding More Accounts
 If you need to add a third account to be able to quick switch between them, open the `.bat` file in some text editor and add the following lines:
 ```bat
@@ -31,10 +38,3 @@ If Errorlevel 3 Goto 3
 set username=THIRD_STEAM_USERNAME
 Goto end
 ```
-
-### Note
-The 3rd step is actually what Steam does when an user login into his account with "Remember Password" option enabled. The script simply does it automatically for every login.
-
-By killing the Steam process without logging out and setting the username in "AutoLoginUser" variable before opening the Steam again, the script forces Steam to reuse the stored password for each account when it is open again.
-
-For Steam, it is the same as Logging In with *"Remember Password"* checkbox ticked, closing Steam, and reopening it, but the script sets the user in registry before reopening Steam.
